@@ -1,0 +1,19 @@
+{
+  "name": "cypress-saucedemo-framework",
+  "version": "1.0.0",
+  "description": "Cypress automation framework for SauceDemo based on custom test cases",
+  "scripts": {
+    "cypress:open": "npx cypress open",
+    "cypress:run": "npx cypress run",
+    "test:chrome": "npx cypress run --browser chrome",
+    "report:merge": "mochawesome-merge cypress/results/json/*.json > cypress/results/index.json",
+    "report:generate": "marge cypress/results/index.json -f report -o cypress/results/html"
+  },
+  "devDependencies": {
+    "cypress": "^13.6.0",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}
